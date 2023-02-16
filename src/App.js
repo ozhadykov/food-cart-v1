@@ -8,7 +8,7 @@ import SingleReciept from './components/Dishes/SingleReciept'
 
 function App() {
   const [foodListData, setFoodListData] = useState([])
-  const [isLoggedIn, setIsLoggedin] = useState(false) //this will be used for login logic?
+  const [isLoggedIn, setIsLoggedin] = useState(false) //this will be used for login logic?hi
 
   const addFoodHandler = (object) => {
     const newObject = {
