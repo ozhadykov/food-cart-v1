@@ -1,0 +1,15 @@
+.fdItem{
+  margin: 1rem 1rem;
+  width: 50vw;
+  padding: 0 3rem;
+  /* border: 2px solid white; */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  background-color: rgb(34, 42, 52);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+}

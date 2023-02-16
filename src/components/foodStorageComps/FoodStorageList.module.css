@@ -1,0 +1,17 @@
+.fdList {
+  margin-top: 40px;
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fdListEmpty {
+  margin: 1rem 1rem;
+  width: 50vw;
+  padding: 0 3rem;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(34, 42, 52);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+}

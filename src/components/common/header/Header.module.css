@@ -1,0 +1,7 @@
+.header {
+  position: fixed;
+  height: 3rem;
+  width: 100vw;
+  border: 2px solid rgba(44, 47, 50, 0.523);
+  background-color: rgb(34, 42, 52);
+}

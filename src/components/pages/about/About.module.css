@@ -1,0 +1,50 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  width: 70rem;
+  padding-top: 3.2rem;
+}
+
+.imgContainer {
+  background-image: url('https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25rem;
+  height: 30rem;
+  border-radius: 15px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  width: 35rem;
+  height: 25rem;
+  background-color: rgb(34, 42, 52);
+  /* padding: 5%; */
+  border-radius: 20px;
+
+}
+
+.textContainer h1 {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.textContainer h2 {
+  margin-bottom: 0;
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.textContainer p {
+  margin-bottom: 3rem;
+  text-align: left;
+  margin-left: 3rem;
+}

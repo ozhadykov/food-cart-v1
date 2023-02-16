@@ -1,0 +1,36 @@
+.recieptContainer {
+  margin-bottom: 70px;
+  width: 75vw;
+  padding: 3vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* border: 1px solid white; */
+  background-color: rgb(34, 42, 52);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.imgContainer img {
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.textContainer {
+  color: white;
+  width: 35rem;
+  padding: 0 2rem;
+  margin: 0;
+  text-align: left;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+
+.textContainer a {
+  color: aliceblue;
+}
