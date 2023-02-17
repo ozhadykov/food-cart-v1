@@ -54,6 +54,9 @@ function App() {
 export default App
 
 // todos:
+// About functionality
+// Logout button or smth to logout
+// Functionality to add a reciept
 //ABout UI
 // 1.Card element
 // 2.Button element
