@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import data from '../src/components/Data/data'
-import { Header, Footer } from './components/common'
+import { Header, Footer, LogInForm } from './components/common'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { About, FoodStorage, Home, Reciepts } from './components/pages'
 import SingleReciept from './components/Dishes/SingleReciept'
@@ -24,20 +24,27 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="reciepts" element={<Reciepts reciepts={data} />} />
-            <Route path="reciepts/:slug" element={<SingleReciept />} />
-            <Route
-              path="/foodstorage"
-              element={
-                <FoodStorage addFood={addFoodHandler} foodList={foodListData} />
-              }
-            />
-            <Route path="about" element={<About />} />
-          </Routes>
-        </main>
+        {isLoggedIn === false ? (
+          <LogInForm setLoggedIn={setIsLoggedin} />
+        ) : (
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="reciepts" element={<Reciepts reciepts={data} />} />
+              <Route path="reciepts/:slug" element={<SingleReciept />} />
+              <Route
+                path="/foodstorage"
+                element={
+                  <FoodStorage
+                    addFood={addFoodHandler}
+                    foodList={foodListData}
+                  />
+                }
+              />
+              <Route path="about" element={<About />} />
+            </Routes>
+          </main>
+        )}
         <Footer />
       </div>
     </Router>
