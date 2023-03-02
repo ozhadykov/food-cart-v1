@@ -20,10 +20,14 @@ function App() {
     })
   }
 
+  const logoutHandler = () => {
+    setIsLoggedin(false)
+  }
+
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header logoutHandler={logoutHandler} />
         {isLoggedIn === false ? (
           <LogInForm setLoggedIn={setIsLoggedin} />
         ) : (

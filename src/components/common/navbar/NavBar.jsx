@@ -1,7 +1,7 @@
 import styles from './NavBar.module.css'
 import { Link } from 'react-router-dom'
 
-function NavBar() {
+function NavBar({ logoutHandler }) {
   return (
     <div className={styles.navbar}>
       <div>
@@ -11,7 +11,7 @@ function NavBar() {
         <Link to="/about">About</Link>
       </div>
       <div>
-        <Link to="/">Logout</Link>
+        <button onClick={logoutHandler}>Logout</button>
       </div>
     </div>
   )

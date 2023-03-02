@@ -1,10 +1,10 @@
 import styles from './Header.module.css'
 import { NavBar } from '../../common'
 
-function Header() {
+function Header({ logoutHandler }) {
   return (
     <header className={styles.header}>
-      <NavBar />
+      <NavBar logoutHandler={logoutHandler} />
     </header>
   )
 }
