@@ -1,11 +1,12 @@
 import styles from './Reciepts.module.css'
 import RecieptList from '../../Dishes/RecieptList'
+import Card from '../../UI/Card'
 
 function Reciepts({ reciepts }) {
   return (
-    <div className={styles.recieptsContainer}>
+    <Card className={styles.recieptsContainer}>
       <RecieptList reciepts={reciepts} />
-    </div>
+    </Card>
   )
 }
 

@@ -7,8 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(255, 255, 255, 0.865);
   overflow-x: hidden;
-
+  background-color: rgb(237, 237, 237);
+  /* background-image: linear-gradient(to bottom right, rgba(44, 65, 45, 0.621), rgba(29, 172, 31, 0.715)); */
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

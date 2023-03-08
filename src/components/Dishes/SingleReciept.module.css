@@ -12,9 +12,9 @@
 }
 
 .titleContainer {
-  color: rgb(49,49,49);
+  color: white;
   width: 60%;
-  border-bottom: 1px solid rgb(49,49,49);
+  border-bottom: 1px solid white;
 }
 
 .titleContainer h1 {
@@ -36,12 +36,12 @@
 .foodListContainer {
   /* display: flex;
   flex-direction: column; */
-  color: rgb(49,49,49);
+  color: white;
 }
 
 .instructionContainer {
   width: 35rem;
   height: auto;
   font-size: large;
-  color: rgb(49,49,49);
+  color: white;
 }

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import styles from './LogInForm.module.css'
+import Card from '../../UI/Card'
+import Form from '../../UI/Form'
 
 const LogInForm = ({ setLoggedIn }) => {
   const [email, setEmail] = useState()
@@ -20,31 +22,34 @@ const LogInForm = ({ setLoggedIn }) => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.topContainer}>
-        <h1>Hello, This Project is about Food</h1>
-        <p>Login to Continue</p>
+    <Card className={styles.container}>
+      <div className={styles.leftPart}>
+        <div className={styles.imgcontainer}></div>
+        <h1>Welcome to ReciptApp</h1>
+        <p>Login or Register to Continue</p>
       </div>
-      <div className={styles.formContainer}>
-        <form onSubmit={submitHandler}>
-          <label>
-            Email
-            <input
-              type="email"
-              onChange={(e) => emailHandler(e.target.value)}
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              onChange={(e) => passwordHandler(e.target.value)}
-            />
-          </label>
-          <button type="submit">Login</button>
-        </form>
+      <div className={styles.rightPart}>
+        <Form
+          formObject={[
+            {
+              key: 'emailFromLogin',
+              label: 'Email',
+              inputType: 'email',
+              value: email,
+              emailHandler,
+            },
+            {
+              key: 'passwordFromLogin',
+              label: 'Password',
+              inputType: 'password',
+              value: password,
+              passwordHandler,
+            },
+          ]}
+          onSubmit={submitHandler}
+        />
       </div>
-    </div>
+    </Card>
   )
 }
 export default LogInForm

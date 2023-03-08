@@ -1,8 +1,9 @@
 import styles from './FoodStorageItem.module.css'
+import Card from '../UI/Card'
 
 function FoodStorageItem({ title, amount }) {
   return (
-    <div className={styles.fdItem}>
+    <Card className={styles.fdItem}>
       <label>
         {/* Product */}
         <p>{title}</p>
@@ -12,7 +13,7 @@ function FoodStorageItem({ title, amount }) {
         {/* Amount */}
         <p>{amount} gramms</p>
       </label>
-    </div>
+    </Card>
   )
 }
 

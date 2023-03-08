@@ -1,8 +1,9 @@
 import styles from './About.module.css'
+import Card from '../../UI/Card'
 
 function About() {
   return (
-    <div className={styles.aboutContainer}>
+    <Card className={styles.aboutContainer}>
       {/* <h1>Hey There!</h1>
       <p>This is my dishes app</p> */}
       <div className={styles.imgContainer}></div>
@@ -28,7 +29,7 @@ function About() {
           Pss.. Check my other projects, i think i have developed myself)
         </p>
       </div>
-    </div>
+    </Card>
   )
 }
 

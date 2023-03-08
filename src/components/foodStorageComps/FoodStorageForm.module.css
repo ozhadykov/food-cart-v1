@@ -14,7 +14,7 @@
 .form h1 {
   text-align: left;
   margin: 0;
-  color: rgb(49, 49, 49);
+  color: white;
 }
 
 .inputElement {
@@ -32,7 +32,7 @@
   border-radius: 9px;
 }
 .inputElement label {
-  color: rgb(49, 49, 49);
+  color: white;
   font-weight: 500;
 }
 
@@ -42,7 +42,7 @@
   border-radius: 9px;
   width: 8rem;
   font-weight: 900;
-  color: rgb(34, 42, 52);
+  color: black;
   background-color: rgb(255, 255, 255);
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
 }

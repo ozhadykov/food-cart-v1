@@ -27,29 +27,31 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header logoutHandler={logoutHandler} />
         {isLoggedIn === false ? (
           <LogInForm setLoggedIn={setIsLoggedin} />
         ) : (
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="reciepts" element={<Reciepts reciepts={data} />} />
-              <Route path="reciepts/:slug" element={<SingleReciept />} />
-              <Route
-                path="/foodstorage"
-                element={
-                  <FoodStorage
-                    addFood={addFoodHandler}
-                    foodList={foodListData}
-                  />
-                }
-              />
-              <Route path="about" element={<About />} />
-            </Routes>
-          </main>
+          <>
+            <Header logoutHandler={logoutHandler} />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="reciepts" element={<Reciepts reciepts={data} />} />
+                <Route path="reciepts/:slug" element={<SingleReciept />} />
+                <Route
+                  path="/foodstorage"
+                  element={
+                    <FoodStorage
+                      addFood={addFoodHandler}
+                      foodList={foodListData}
+                    />
+                  }
+                />
+                <Route path="about" element={<About />} />
+              </Routes>
+            </main>
+            <Footer />
+          </>
         )}
-        <Footer />
       </div>
     </Router>
   )
@@ -58,6 +60,7 @@ function App() {
 export default App
 
 // todos:
+//UI bib
 // About functionality
 // Logout button or smth to logout
 // Functionality to add a reciept

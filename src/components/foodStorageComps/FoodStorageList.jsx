@@ -1,9 +1,10 @@
 import FoodStorageItem from './FoodStorageItem'
 import styles from './FoodStorageList.module.css'
+import Card from '../UI/Card'
 
 function FoodStorageList({ foodList }) {
   return (
-    <div className={styles.fdList}>
+    <Card className={styles.fdList}>
       {foodList.length === 0 ? (
         <div className={styles.fdListEmpty}>
           <h1>Your Storage is empty :(</h1>
@@ -19,7 +20,7 @@ function FoodStorageList({ foodList }) {
           )
         })
       )}
-    </div>
+    </Card>
   )
 }
 

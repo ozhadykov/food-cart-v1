@@ -1,9 +1,10 @@
 import styles from './Reciept.module.css'
 import { Link } from 'react-router-dom'
+import Card from '../UI/Card'
 
 function Reciept(props) {
   return (
-    <div className={styles.recieptContainer}>
+    <Card className={styles.recieptContainer}>
       <div className={styles.imgContainer}>
         <img src={props.imgLink} alt="" />
       </div>
@@ -13,7 +14,7 @@ function Reciept(props) {
         </Link>
         <p>{props.instruction.slice(0, 300)}</p>
       </div>
-    </div>
+    </Card>
   )
 }
 

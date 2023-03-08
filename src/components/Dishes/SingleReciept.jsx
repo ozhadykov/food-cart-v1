@@ -2,6 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import data from '../Data/data'
 import styles from './SingleReciept.module.css'
+import Card from '../UI/Card'
 
 const SingleReciept = () => {
   const params = useParams()
@@ -13,7 +14,7 @@ const SingleReciept = () => {
   }, [reciept, navigate])
 
   return (
-    <div className={styles.mainContainer}>
+    <Card className={styles.mainContainer}>
       <div className={styles.titleContainer}>
         <h1>{reciept.title}</h1>
       </div>
@@ -33,7 +34,7 @@ const SingleReciept = () => {
       <div className={styles.instructionContainer}>
         <p>{reciept.instruction}</p>
       </div>
-    </div>
+    </Card>
   )
 }
 export default SingleReciept

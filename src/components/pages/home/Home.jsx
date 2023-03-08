@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AddNewReciept from '../../Dishes/AddNewReciept'
+import Card from '../../UI/Card'
 import styles from './Home.module.css'
 
 function Home() {
   return (
-    <div className={styles.welcomeBlock}>
+    <Card className={styles.welcomeBlock}>
       <div className={styles.welcomeImage}>
         <div className={styles.welcomeInnerBlock}>
           <h1>Welcome to the Foodcart</h1>
@@ -19,7 +20,7 @@ function Home() {
       <div>
         <AddNewReciept />
       </div>
-    </div>
+    </Card>
   )
 }
 
