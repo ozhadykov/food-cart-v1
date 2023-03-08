@@ -1,15 +1,13 @@
 .container {
   margin-top: 6.4rem;
-  background-color: rgb(34, 42, 52);
+  background-color: rgba(116, 181, 117, 0.715) ;
   width: 50rem;
   height: 20rem;
   border-radius: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 .topContainer {
-  color: white;
+  color: rgb(49, 49, 49);
 }
 
 .formContainer{
@@ -22,7 +20,7 @@
 .formContainer form label {
   width: 15rem;
   height: 4rem;
-  color: white;
+  color: rgb(49, 49, 49);
   text-align: left;
   display: flex;
   flex-direction: column;

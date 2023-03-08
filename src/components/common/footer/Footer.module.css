@@ -6,11 +6,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background-color: rgb(34, 42, 52);
+  color: rgb(49, 49, 49);
+  font-weight: 600;
+  background-color: rgba(116, 181, 117, 0.715);
 }
 
 .svg{
   font-size: 40px;
-  color: white;
+  padding-left: 3.5rem;
+  color: rgb(49, 49, 49);
+}
+
+.name {
+  padding-right: 3.5rem;
 }

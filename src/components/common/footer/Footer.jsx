@@ -7,7 +7,7 @@ function Footer() {
       <div>
         <BiCopyright className={styles.svg} />
       </div>
-      <div>
+      <div className={styles.name}>
         <p>Made by Omar Zhadykov</p>
         <p>2023</p>
       </div>

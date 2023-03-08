@@ -15,7 +15,8 @@
   text-decoration: none;
   text-transform: uppercase;
   outline: none;
-  color: white;
+  color: rgb(49, 49, 49);
+  font-weight: 600;
 }
 
 .navbar a:hover {

@@ -18,7 +18,7 @@
   border-radius: 15px;
   width: 70vw;
   height: 20rem;
-  filter: grayscale(0.8);
+  /* filter: grayscale(0.8); */
   overflow: hidden;
   display: flex;
   justify-content: center;

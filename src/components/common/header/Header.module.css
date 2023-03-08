@@ -2,6 +2,7 @@
   position: fixed;
   height: 3rem;
   width: 100vw;
-  border: 2px solid rgba(44, 47, 50, 0.523);
-  background-color: rgb(34, 42, 52);
+  /* border: 2px solid rgba(255, 255, 255, 0.523); */
+  background-color: rgba(116, 181, 117, 0.715);
+  border-radius: 0px 0px 10px 10px;
 }
