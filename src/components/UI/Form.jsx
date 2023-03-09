@@ -1,6 +1,6 @@
 import Card from './Card'
 
-function Form({ formObject, onSubmit }) {
+function Form({ formObject, onSubmit, buttonTitle }) {
   return (
     <form onSubmit={onSubmit}>
       {formObject.map((formField) => {
@@ -16,7 +16,7 @@ function Form({ formObject, onSubmit }) {
           </Card>
         )
       })}
-      <button type="submit">Login</button>
+      <button type="submit">{buttonTitle}</button>
     </form>
   )
 }

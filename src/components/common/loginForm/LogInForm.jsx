@@ -25,10 +25,12 @@ const LogInForm = ({ setLoggedIn }) => {
     <Card className={styles.container}>
       <div className={styles.leftPart}>
         <div className={styles.imgcontainer}></div>
-        <h1>Welcome to ReciptApp</h1>
-        <p>Login or Register to Continue</p>
+        <div className={styles.line}></div>
+        <h1>Welcome to RecipeApp</h1>
+        {/* <p>Login or Register to continue</p> */}
       </div>
       <div className={styles.rightPart}>
+        <h1>Login</h1>
         <Form
           formObject={[
             {
@@ -47,7 +49,10 @@ const LogInForm = ({ setLoggedIn }) => {
             },
           ]}
           onSubmit={submitHandler}
+          buttonTitle="Login"
         />
+        <p>Don't have an Account? Sign Up</p>
+        {/* TODO: Create 2 Components LoginForm Comp and RegisterComponent and one main Welcome Component  */}
       </div>
     </Card>
   )
