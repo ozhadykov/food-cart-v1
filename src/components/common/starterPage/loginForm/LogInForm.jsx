@@ -1,24 +1,28 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import styles from './LogInForm.module.css'
-import Card from '../../UI/Card'
-import Form from '../../UI/Form'
+import Card from '../../../UI/Card'
+import Form from '../../../UI/Form'
+import AuthContext from '../../../context/auth-context'
 
-const LogInForm = ({ setLoggedIn }) => {
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+const LogInForm = ({ changeForm }) => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
 
-  const emailHandler = (value) => {
-    setEmail(value)
+  const formDataHandler = (name, text) => {
+    setFormData({ ...formData, [name]: text })
   }
 
-  const passwordHandler = (value) => {
-    setPassword(value)
-  }
+  const { loginHandler } = useContext(AuthContext)
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setLoggedIn(true)
-    console.log(email, password)
+    loginHandler()
+  }
+
+  const handleFormChange = () => {
+    changeForm()
   }
 
   return (
@@ -27,7 +31,6 @@ const LogInForm = ({ setLoggedIn }) => {
         <div className={styles.imgcontainer}></div>
         <div className={styles.line}></div>
         <h1>Welcome to RecipeApp</h1>
-        {/* <p>Login or Register to continue</p> */}
       </div>
       <div className={styles.rightPart}>
         <h1>Login</h1>
@@ -37,22 +40,26 @@ const LogInForm = ({ setLoggedIn }) => {
               key: 'emailFromLogin',
               label: 'Email',
               inputType: 'email',
-              value: email,
-              emailHandler,
+              value: formData.email,
+              stateKey: 'email',
+              handler: formDataHandler,
             },
             {
               key: 'passwordFromLogin',
               label: 'Password',
               inputType: 'password',
-              value: password,
-              passwordHandler,
+              value: formData.password,
+              stateKey: 'password',
+              handler: formDataHandler,
             },
           ]}
           onSubmit={submitHandler}
           buttonTitle="Login"
         />
-        <p>Don't have an Account? Sign Up</p>
-        {/* TODO: Create 2 Components LoginForm Comp and RegisterComponent and one main Welcome Component  */}
+        <p>
+          Don't have an Account?{' '}
+          <button onClick={handleFormChange}>Sign Up</button>
+        </p>
       </div>
     </Card>
   )

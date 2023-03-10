@@ -1,14 +1,16 @@
 import './App.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import data from '../src/components/Data/data'
-import { Header, Footer, LogInForm } from './components/common'
+import { Header, Footer, StarterPage } from './components/common'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { About, FoodStorage, Home, Reciepts } from './components/pages'
 import SingleReciept from './components/Dishes/SingleReciept'
+import AuthContext from './components/context/auth-context'
 
 function App() {
   const [foodListData, setFoodListData] = useState([])
-  const [isLoggedIn, setIsLoggedin] = useState(false) //this will be used for login logic?hi
+
+  const { isLoggedIn } = useContext(AuthContext)
 
   const addFoodHandler = (object) => {
     const newObject = {
@@ -20,18 +22,14 @@ function App() {
     })
   }
 
-  const logoutHandler = () => {
-    setIsLoggedin(false)
-  }
-
   return (
     <Router>
       <div className="App">
         {isLoggedIn === false ? (
-          <LogInForm setLoggedIn={setIsLoggedin} />
+          <StarterPage />
         ) : (
           <>
-            <Header logoutHandler={logoutHandler} />
+            <Header />
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -61,9 +59,14 @@ export default App
 
 // todos:
 // About functionality
-// Logout button or smth to logout - done
 // Functionality to add a reciept
 //ABout UI
-// 1.Card element done
 // 2.Button element
-// Form element done
+
+/*
+TODOES about Functionality
+
+I have to add context API and then may be Redux, now i only need a main State about logging in, because when i refresh my app
+it logs out, for the reason of re render app component and the state goes again false  
+### done))
+*/
